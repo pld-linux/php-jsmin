@@ -11,7 +11,8 @@ Source0:	http://github.com/rgrove/jsmin-php/tarball/master?/%{pkgname}.tgz
 # Source0-md5:	1065a82d2d9f76e46ab74dd545c5fdb6
 URL:		http://github.com/rgrove/jsmin-php/
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
-BuildRequires:	rpmbuild(macros) >= 1.461
+BuildRequires:	rpmbuild(macros) >= 1.553
+BuildRequires:	sed	>=4.0
 Requires:	php-common >= 4:%{php_min_version}
 Requires:	php-pcre
 BuildArch:	noarch
@@ -23,6 +24,7 @@ PHP implementation of Douglas Crockford's JSMin.
 %prep
 %setup -qc
 mv *-jsmin-php-*/* .
+%undos *.php
 
 %install
 rm -rf $RPM_BUILD_ROOT
