@@ -1,6 +1,5 @@
 %define		php_min_version 5.0.0
 %define		pkgname	jsmin
-%include	/usr/lib/rpm/macros.php
 Summary:	PHP implementation of Douglas Crockford's JSMin
 Name:		php-%{pkgname}
 Version:	1.1.1
